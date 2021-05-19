@@ -35,11 +35,19 @@
 Array.prototype.getRandom = function () {
   return this.splice(Math.floor(Math.random() * this.length), 1)[0];
 };
-
 function pairs(names) {
   // Your code goes here
+  let newName = names.sort((a, b) => 0.5 - Math.random());
+  let result=[];
+  counter=0;
+  while(counter<newName.length){
+    if (newName.length -1 ==counter) result.push([newName[counter]] )
+    else result.push([newName[counter],newName[counter+1]] )
+    
+    counter+=2;
+  }
+  return result;
 }
-
 module.exports = pairs;
 
 console.log(
