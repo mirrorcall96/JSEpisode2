@@ -40,7 +40,7 @@ function pairs(names) {
   if (names && names[0]){
     let newName = names.sort((a, b) => 0.5 - Math.random());
     let result=[];
-    counter=0;
+    let counter=0;
     while(counter<newName.length){
       if (newName.length -1 ==counter) result.push([newName[counter]] )
       else result.push([newName[counter],newName[counter+1]] )
