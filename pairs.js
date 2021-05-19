@@ -37,6 +37,7 @@ Array.prototype.getRandom = function () {
 };
 function pairs(names) {
   // Your code goes here
+  if (names && names[0]){
   let newName = names.sort((a, b) => 0.5 - Math.random());
   let result=[];
   counter=0;
@@ -47,9 +48,13 @@ function pairs(names) {
     counter+=2;
   }
   return result;
+  }
+  else {
+    return [];
+  }
 }
 module.exports = pairs;
 
 console.log(
-  pairs(["Asis", "Hamsa", "Fawas", "Mishmish", "Hussein", "Lailz", "Mr Potato"])
+  pairs([])
 );
